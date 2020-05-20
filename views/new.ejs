@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">
+                <h2>Pokedex</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Add a Pokemon</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>      
+        <div class="container2 newContainer2">
+            <form class="newForm" action="/" method="POST">
+                <div class="contents contents-img">             
+                    <label for="name"><h4>Name</h4></label>
+                    <br>
+                    <input type="text" name="name" id="name" placeholder="Name">
+                    <div class="contents contents-name">
+                        <label for="image"><h4>image</h4></label>
+                        <br>
+                        <input type="text" name="image" id="image" placeholder="Image Link">
+                    </div>
+                </div>                
+                <div class="contents">
+                    <label for="stats"><h4>Stats</h4></label>
+                    <% for (let [key, value] of Object.entries(pokemon.stats)) { %>
+                        <p class="editPara"><%= (`${key}: `)%><input type="number" name="stats" class="editNumbers" id="stats" value="0">
+                        </p>
+                    <% } %>
+                </div>
+                <div class="contents">
+                    <label for="stats"><h4>Damages</h4></label>
+                    <% for (let [key, value] of Object.entries(pokemon.damages)) { %>
+                        <p class="editPara"><%= (`${key}: `)%><input type="number" name="stats" class="editNumbers" id="stats" value="0">
+                        </p>
+                    <% } %>
+                    <input class="btn btn-info" type="submit" value="SUBMIT">
+                </div>
+            </form>           
+        </div>
+    </div>
+</body>
+
+</html>

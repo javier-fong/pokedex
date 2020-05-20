@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    height: 1500px;
+}
+
+.flex-container {
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    margin: 20px;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+h6 {
+    background: rgb(247, 248, 249);
+}
+
+.container2 {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.showImg {
+    width: 250px;
+    height: 250px;
+    margin-right: 60px;
+}
+
+.editNumbers {
+    width: 60px;
+    color: rgb(106, 106, 106);
+}
+
+.editPara {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+#image {
+    width: 400px;
+}
+
+.newForm {
+    display: flex;
+    width: 1100px;
+    justify-content: space-around;
+}
+
+.contents-name {
+    margin-top: 30px;
+}
+
+.editForm {
+    display: flex;
+    width: 1100px;
+    justify-content: space-around;
+}
+
+.liContainer {
+    display: flex;
+    justify-content: space-around;
+    background: rgb(247, 248, 249);
+}
+
+.deleteInput {
+    background: none;
+    border: none;
+    color: gray;
+    padding: 0;
+}
+
+.deleteInput:hover {
+    color: black;
+}
